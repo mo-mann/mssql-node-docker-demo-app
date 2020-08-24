@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
     //set up the connection information
     var config = {
         userName: 'sa',
-        password: 'Yukon900', // update me
+        password: 'P@ssw0rd', // update me
         server: 'localhost',
         options: {
             database: 'DemoData'
@@ -40,6 +40,6 @@ app.get('/', function (req, res) {
     });
 })  
 
-var server = app.listen(8080, function () {
+var server = app.listen(9000, function () {
     console.log("Listening on port %s...", server.address().port);
 });

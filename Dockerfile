@@ -1,4 +1,5 @@
-FROM microsoft/mssql-server-linux:latest
+# FROM microsoft/mssql-server-linux:latest
+FROM mcr.microsoft.com/mssql/server:2017-latest-ubuntu
 
 # Install node/npm
 RUN apt-get -y update  && \
@@ -23,6 +24,6 @@ COPY . /usr/src/app
 # Grant permissions for the import-data script to be executable
 RUN chmod +x /usr/src/app/import-data.sh
 
-EXPOSE 8080
+EXPOSE 9000
 
 CMD /bin/bash ./entrypoint.sh
